@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Загадка: перевозка груза</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <h1>Загадка: перевозка животных</h1>
+  <h4>“Крестьянину нужно перевезти через реку волка, козу и капусту. Но лодка такова, что в ней может поместиться только крестьянин, а с ним или один волк, или одна коза, или одна капуста. Но если оставить волка с козой, то волк съест козу, а если оставить козу с капустой, то коза съест капусту. Как перевез свой груз крестьянин?”</h4>
+  <h4>Что перевезешь первым делом? Для выбора жмякаем 2 раза</h4>
+  <h4 class="reverse">(Подсказка: нужно выбрать правильную последовательность и перевозить можно неограниченное количество раз)</h4>
+  
+  
+  <form action="save-answer.php" method="post">
+    <div class="container">
+      <div class="item" id="wolf">Волк</div>
+      <div class="item" id="goat">Коза</div>
+      <div class="item" id="cabbage">Капуста</div>
+    </div>
+    <button onclick="checkSequence()" type="button">Закончил перевозить? Давай проверим </button>
+    <div id="result"></div>
+
+    <table border="1" class="table">
+      <tr>
+        <th id="point1">Левый берег</th>
+        <th id="point2">Правый берег</th>
+      </tr>
+      <tr>
+        <td id="wolf_t" class="moveable">Волк</td>
+        <td id="wolf_t_r"></td>
+      </tr>
+      <tr>
+        <td id="goat_t" class="moveable">Коза</td>
+        <td id="goat_t_r"></td>
+      </tr>
+      <tr>
+        <td id="cabbage_t" class="moveable">Капуста</td>
+        <td id="cabbage_t_r"></td>
+      </tr>
+    </table>
+  </form>
+ 
+  <button onclick="window.location.reload()" type="button">Сначала?</button>
+  
+  <script src="script.js"></script>
+  
+  
+</body>
+</html>
